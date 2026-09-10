@@ -8,11 +8,17 @@ def domain_name(url):
     a = []
     if len(url) > 0:
         for i in range(len(url)-1, 0, -1):
+            print(url[i])
             if url[i] == '/' and url[i+1] != '/':
                 ind = i
+                print(url[i])
+            else:
+                pass
+        print(ind, url)
         if ind != 0:
             url = url[:len(url)-ind]
             url = url[:-1]
+        print(ind, url)
         for i in range(len(url)-1, 0, -1):
             if url[i] != '.':
                 x+=1
